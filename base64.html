@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>周易密码</title>
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+  <div class="wrapper">
+    
+    <textarea class="m-textarea" v-model="strOrigin" placeholder="magnet:?xt=urn:btih:"></textarea>
+    
+    <textarea class="m-textarea" :value="strEncrypted" placeholder="加密结果"></textarea>
+  </div>
+  <div class="wrapper">
+    
+    <textarea class="m-textarea" v-model="strEncoded" placeholder="要解密的文本"></textarea>
+    
+    <textarea class="m-textarea" :value="strDecoded" placeholder="解密结果"></textarea>
+  </div>
+</div>
+  <div><a href="colors.html">书签预处理</a></div>
+  <script src='https://cdn.bootcss.com/vue/2.6.10/vue.min.js'></script>
+    <script  src="js/index.js"></script>
+</body>
+</html>

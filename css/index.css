@@ -1,0 +1,499 @@
+@charset "utf-8";
+/*
+a{
+	text-decoration: none;//清除超链接下划线
+}
+li{
+	list-style: none;//清除列表样式
+}*/
+/*页面初始化*/
+* {
+padding: 0;
+margin: 0;
+}
+
+/*
+
+主页整体样式
+文本对齐:中心
+背景尺寸:100%
+背景重复:不重复
+背景颜色:#000000
+*/
+
+body {
+text-align: center;
+background-size: 100%;
+background-repeat: no-repeat;
+background-color: #e9e5e5;
+}
+
+/*
+
+logo图标样式
+宽度:300px
+高度:120px
+最大宽度:100%
+动画:flipInX 4s
+-webkit-动画:flipInX 4s
+*/
+
+img.smaller {
+width: 300px;
+height: 120px;
+max-width: 100%;
+animation: flipInX 4s;
+-webkit-animation: flipInX 4s
+}
+
+/*
+
+logo添加文字样式
+字体大小:2em
+白色空间:正常
+自动换行:断词
+文本修饰:无
+颜色:#f5f5f5
+*/
+
+.logo {
+font-size: 2em;
+white-space: normal;
+word-wrap: break-word;
+text-decoration: none;
+color: #f5f5f5
+}
+
+/*
+
+搜索栏字体样式
+宽度:95%
+高度:45px
+背景颜色:透明
+边境:无
+大纲:0
+字体大小:20px
+字体颜色:#212121
+填充:0 5px
+边界半径:50px
+*/
+
+#search_input {
+width: 95%;
+height: 45px;
+background-color: transparent;
+border: none;
+outline: 0;
+font-size: 20px;
+color: #212121;
+padding: 0 5px;
+border-radius: 50px
+}
+
+/*
+
+搜索框边距
+下边距:25px
+上边距:0px
+*/
+
+.search_part {
+margin-bottom: 25px;
+margin-top: 85px;
+}
+
+/*
+
+跨度样式
+显示:阻止
+溢出:隐藏
+左填充:0px
+垂直对齐:居中
+*/
+
+.search_bar span {
+display: block;
+overflow: hidden;
+padding-left: 0px;
+margin-right: 0px;
+vertical-align: middle;
+}
+
+.search_bar span i {
+display: none;
+float: right;
+width: 30px;
+height: 45px;
+background: url(../img/remove.png) no-repeat center;
+background-size: 15px;
+}
+
+.search_bar .si {
+margin: 0 36px 0 0;
+}
+
+/*
+
+搜索栏框架样式
+框阴影:0 0 18px rgba(158,158,158,255)
+-webkit-动画:fadeIn 2.5s
+动画:fadeIn 2.5s
+背景色:rgba(255,255,255,255)
+边界半径:5px
+显示:表
+垂直对齐:居中
+宽度:90%
+高度:45px
+最大宽度:100%
+边距:10px 默认布局
+*/
+
+.search_bar {
+box-shadow: 0 0 15px rgba(158,158,158,255);
+-webkit-animation: fadeIn 2.5s;
+animation: fadeIn 2.5s;
+background-color: rgba(255,255,255,255);
+border-radius: 5px;
+display: table;
+vertical-align: middle;
+width: 90%;
+height: 45px;
+max-width: 100%;
+margin: 10px auto;
+position: relative;
+z-index: 100;
+}
+
+/*
+
+搜索图标样式
+轮廓边框:0
+高度:45px
+浮标位置:右
+颜色:#212121
+边界半径:5px
+字体大小:20px
+字体粗细:700
+边境:无
+背景颜色:透明
+填充:0 10px 0 0
+*/
+
+#search_submit {
+outline: 0;
+height: 45px;
+float: right;
+color: #212121;
+border-radius: 5px;
+font-size: 20px;
+font-weight: 700;
+border: none;
+background-color: transparent;
+padding: 0 13px 0 3px
+}
+
+#suggest {
+position: absolute;
+left: 0px;
+right: 0px;
+top: 45px;
+background: rgba(255,255,255,255);
+box-shadow: 0 0 10px rgba(158,158,158,255);
+border-radius: 5px;
+line-height: 45px;
+}
+
+#suggest li {
+text-align: left;
+padding-left: 10px;
+}
+
+#suggest li:active {
+background: #eeeeee;
+}
+
+#suggest li b {
+float: right;
+width: 45px;
+height: 45px;
+border-radius: 50px;
+background: url(img/choose.png) no-repeat scroll center center rgba(255,255,255,255);
+background-size: 11px;
+}
+
+#suggest .close {
+text-align: right;
+font-size: 15px;
+color: #9e9e9e;
+padding-right: 15px;
+}
+
+/*
+
+排版
+宽度:100%
+文本对齐:中心
+填充顶部:0px
+填充底部:0px
+*/
+
+#content {
+width: 100%;
+text-align: center;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+
+/*
+
+书签框架样式
+-webkit-动画:fadeInDown 1s
+动画:fadeInDown 1s
+位置:相对应
+显示:显示在内部
+宽度:75px
+边境:0
+*/
+
+.box {
+-webkit-animation: fadeInDown 1s;
+animation: fadeInDown 1s;
+position: relative;
+display: inline-block;
+width: 75px;
+border: 0;
+}
+
+/*
+
+书签样式
+宽度:100%
+高度:100%
+位置:不受限制
+左:0
+顶:0
+*/
+
+.box a {
+width: 100%;
+height: 100%;
+position: absolute;
+left: 0;
+top: 0;
+}
+
+/*
+
+书签字体样式
+颜色:#f5f5f5
+高度:1em
+线的高度:1em
+宽度:75px
+字体大小:0.75em
+白色空间:nowrap
+溢出:隐藏
+边距:默认布局
+-webkit-边框顶部右半径:0px
+-webkit-边框底部右半径:0px
+文本溢出:省略
+-o-文本溢出:省略
+气相色谱质谱文本溢出:省略
+填充顶部:0px
+填充底部:10px
+*/
+
+.url {
+color: #f5f5f5;
+height: 1em;
+line-height: 1em;
+width: 75px;
+font-size: 0.75em;
+white-space: nowrap;
+overflow: hidden;
+margin: auto;
+-webkit-border-top-right-radius: 0px;
+-webkit-border-bottom-right-radius: 0px;
+text-overflow: ellipsis;
+-o-text-overflow: ellipsis;
+-ms-text-overflow: ellipsis;
+padding-top: 0px;
+padding-bottom: 10px;
+}
+
+/*
+
+书签图标样式
+宽度:3em
+高度:3em
+最大宽度:3em
+*/
+
+.icon {
+width: 3em;
+height: 3em;
+max-width: 3em;
+}
+
+/*
+
+标题字体样式
+-webkit-动画:fadeInDown 1s
+动画:fadeInDown 1s
+颜色:#f5f5f5
+高度:1em
+线的高度:1em
+字体大小:1em
+填充顶部:0px
+填充底部:15px
+*/
+
+.title {
+-webkit-animation: fadeInDown 1s;
+animation: fadeInDown 1s;
+color: #eeeeee;
+height: 1em;
+line-height: 1em;
+font-size: 1em;
+padding-top: 0px;
+padding-bottom: 15px;
+}
+
+/*
+
+标签字体样式
+-webkit-动画:fadeInDown 1s
+动画:fadeInDown 1s
+颜色:#f5f5f5
+高度:1em
+线的高度:1em
+字体大小:0.75em
+*/
+
+.label {
+-webkit-animation: fadeInDown 1s;
+animation: fadeInDown 1s;
+color: #eeeeee;
+height: 1em;
+line-height: 1em;
+font-size: 0.75em;
+}
+
+/*动画样式*/
+
+@-webkit-keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(90deg);
+		transform: perspective(400px) rotateX(90deg);
+		opacity: 0
+	}
+
+	40% {
+		-webkit-transform: perspective(400px) rotateX(-10deg);
+		transform: perspective(400px) rotateX(-10deg)
+	}
+
+	70% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		transform: perspective(400px) rotateX(10deg)
+	}
+
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0);
+		transform: perspective(400px) rotateX(0);
+		opacity: 1
+	}
+}
+
+@keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(90deg);
+		-ms-transform: perspective(400px) rotateX(90deg);
+		transform: perspective(400px) rotateX(90deg);
+		opacity: 0
+	}
+
+	40% {
+		-webkit-transform: perspective(400px) rotateX(-10deg);
+		-ms-transform: perspective(400px) rotateX(-10deg);
+		transform: perspective(400px) rotateX(-10deg)
+	}
+
+	70% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		-ms-transform: perspective(400px) rotateX(10deg);
+		transform: perspective(400px) rotateX(10deg)
+	}
+
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0);
+		-ms-transform: perspective(400px) rotateX(0);
+		transform: perspective(400px) rotateX(0);
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px)
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+		-ms-transform: translateY(-20px);
+		transform: translateY(-20px)
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+/*设置今日诗词字体样式*/
+.poem_sentence{
+	margin: 1px 1px 1px 1px ;
+	padding: 1px 1px 1px 1px;
+	font-family: "楷体";
+	font-size: 1.5em;
+	font-weight: 900;
+	font-color:#e62117;
+
+}
+.poem_info{
+	margin: 8px 1px 1px 1px ;
+	padding: 1px 1px 1px 1px;
+	font-color:#F00;
+	font-size: 1em;
+}
