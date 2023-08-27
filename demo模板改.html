@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    #app {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        min-width: 650px;
+        overflow: hidden;
+    }
+
+    .content {
+        width: 100%;
+        border: 1px solid #00a383;
+        height: calc(100% - 35px);
+        overflow: hidden;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    .nav {
+        height: 40px;
+        padding-left: 15px;
+        line-height: 40px;
+        font-weight: bold;
+        color: #00a383;
+        border-bottom: 3px solid #00a383;
+    }
+
+    .search {
+        float: right;
+        width: 300px;
+        height: 25px;
+        margin-top: 5px;
+    }
+
+    .btn {
+        float: right;
+        margin-left: 30px;
+        margin-right: 40px;
+        margin-top: 5px;
+        width: 80px;
+        height: 29px;
+    }
+
+    .list {
+        height: calc(100%-45px);
+        overflow: auto;
+        flex: 0 0 200px;
+    }
+
+    .item {
+        padding-left: 15px;
+        line-height: 30px;
+        cursor: pointer;
+        transition: all .5s;
+    }
+
+    .active,
+    .item:hover {
+        color: #fff;
+        background: #00a383 !important;
+    }
+
+    .item:nth-child(odd) {
+        background: rgba(0, 0, 0, .1);
+    }
+
+    .info {
+        display: inline-block;
+        flex: 1 1 auto;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .name {
+        text-align: center;
+        line-height: 30px;
+        border-bottom: 1px solid #ccc;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    .tags,
+    .story {
+        padding: 30px;
+    }
+
+    .tags>span {
+        margin-right: 30px;
+    }
+
+    .img {
+        margin: 15px 0;
+        text-align: center;
+        max-height: 45%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgChangeBtn {
+        display: inline-block;
+        vertical-align: top;
+        width: 50px;
+        height: 30px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: all .5s;
+    }
+
+    .imgChangeBtn:hover {
+        opacity: 1
+    }
+
+    .btnLeft {
+        background: no-repeat center center url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAqtJREFUSA29l0+IEnEUx3faiiWKhaXDFkQsdok6eRHCP9AiQRgWe9Lw4qVLhw7iqU2i0qOCR4kFO3nzIgjCnjoZiBFlyFq3MKh1a6ViYdneZ3JsnMTmN6v7hS8zv5n3ft/f+/ne/J7anD1oYrYkXBYuChcGlMvcrwG/ybUr3BYeCCeCCSdhXl6uCF3Ck5MMTe/25L4j/CjcNz0fuZ0kfF4srwiJzgnYibfCT+OcicgKFnNZeFV43PpSYYwvi0fjq9XPKoyoW3jRaniIMblxWsjvP4RVmEinKWoInZGbY8IvxgOzMNvC9s4KRN4X7iLAKgALIJFmDTT0YA1hSsZp9qosFg209IhJKBcDJ9jY2LhWqVRuKviipRExe2/34zAyf6lUuh6LxR602+2xtTpi/HeA1hK1xmdQGeVy+UYoFIrncrlniUTiteIEywjz7VVCtVq9tbq6ejeTyTxeX19/p+T8x3gRYaWk2tzcXPP5fGupVOpROp1uOxDFZUFJuFar3fZ6vXeSyeTDbDb7waGoLmyUk605+v3+D03T5gVUwqFAMV8Q2spqyeJOIBDYj8fj93u9XqNer+84VP+J8DnhKbsTFIvF98Fg8ISI3+t2u68ajcZ3u74mu122ms5BCX6/v9RsNmv5fP5JNBpl4arYQXjkuLI7g8fjedFqtV4WCoWn4XD4rF2/gd1nhOmR9hQddXO32/0c8UgkonKqobVtZOclGXAWHwVaIrJllBONGT3SrIEGWsPzmG6QxmzWQEPvPCknA3QGjDmtZoEtmVSPlsnNwozpBmnM6JGmCY7NN+YJrcK8o7z47acVOZEieiAcYpwwL+kGacwQ5yBxAhKJc3q4veZJjHIyPzPfs7AVoUto63sudtRpR4ignkhy/Qf/EzYcsCN6upWp/Gn7DXh2ngUQoOWfAAAAAElFTkSuQmCC)
+    }
+
+    .btnRight {
+        background: no-repeat center center url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAsFJREFUSA29V8+LUlEY1V5GRBkNLaYo+mEtolkJbhIEw1UuXCu4UVdhMP0LUQSCezdhooTOaghcKISgBe7CohSZoZ1N1AzESE0TTzvHvG9eT0fvc7QDh3ffvd+9536f373v02qRgxVmS+AyeBY8OSQelr0hv+O5Be6AfXAiuOAkKBi8BjrAE5MMdWP7aG+Cn0BV1/9Pc5LwRVjeBundLGAkPoCdcZPpkRHczC1wBTxuHDTxzrncPDW2jfOMwhR1gleMhkd4Z26cBvn7azAK09N5igqhM2gcA7+JDr0ww8LwLgr0vAvuUoC7ILgBJtKiQY2Bs0KYR2bW7DWzWWpQa+AxE8rBFxkUi8V76XT6joztITbUstJjxl72crC02+1OOBxeLRQKdw9ZeFo3tZYY7+vguWnWYrxUKm3Z7fZ2JBJ56HQ6d/P5PG8ps/hN4ZvgKTMzy+XyF5vN9hHiq263+1cul2ubmQ/bnhCWDrUQqFQqX1VVfQfxB16v15LJZJpiTOLZpzAvDZHdEnMOTGq12na3230bjUbvezyeXjabbR2MTmwpMwnql1QUxQoo2MAPff+0Nj2+DJoONReOx+NXE4nE42q1uub3+4vsk8RPeszPl2nEYrFLyWTyUb1ef+nz+dZNLrBHj+2g9HGiQCgUupBKpZ40Go1XyOoX7DOJzxTugQy3FAKBwHlk8NNWq/XG5XI9l5o0atRiqFkj7Y+Oje8JBoMrzWbzNS6PZ+MtpvZSa4f3NHED5LH6H+B53xDHiYXZTElmcqfUoJZ2cahoszBbNKhBrb8f5aEaKwMmG79Wi8AGFh14y8UppAerQRZmrJHmiQ4We69f0CjMMVaD/O3n5Tk9pWgf1DBOmIOsBlmYUXzW2pqJ1AC18KKtQRwnrcPQ4MZYIzlA2fuc53QTpOAgkfAcwTRhMYF29H4ZnMuftj877aWOeNF+QwAAAABJRU5ErkJggg==)
+    }
+
+    .img>img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .noData {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <div class="nav">
+            <span>列表</span>
+            <button class="btn">搜 索</button>
+            <input class="search" type="text" placeholder="请输入女优名称进行搜索">
+        </div>
+        <div class="content">
+            <!-- 人物列表 -->
+            <ul class="list">
+                <li class="item " :class="{active:avIndex==index}" v-for="(item,index) in avny" @click="search(index)">
+                    {{item.name}}
+                </li>
+            </ul>
+            <!-- 人物详情 -->
+            <div class="info">
+                <div class="name">
+                    <a :href="hrefTemp" @click="herf"> {{avny[avIndex].name}}</a>
+                </div>
+                <div class='img'>
+                    <img :src=" avny[avIndex].img " alt=" ">
+                </div>
+                <div class="tags ">
+                    <h5>特征：</h5>
+                    <span></span>
+                </div>
+                <div class="story ">故事</div>
+            </div>
+        </div>
+        <div class="noData ">暂无数据</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js "></script>
+    <script>
+        let javbus = 'https://seejav.club/';
+        new Vue({
+            el: "#app ",
+            data: {
+                hrefTemp: " ",
+                hashBool: true,
+                avIndex: 0,
+                avny: [{
+                    "name ": "下着モデルをさせられて - 系列 ",
+                    "url ": `${javbus}/series/goq`,
+                    "img ": "image/goq.png "
+                }, {
+                    "name ": "HEYZO ",
+                    "url ": `${javbus}/uncensored/search/heyzo`,
+                    "img ": "image/heyzo.png "
+                }, {
+                    "name ": "S-Cute發行商 ",
+                    "url ": `${javbus}/label/1fx`,
+                    "img ": "image/1fx.png "
+                }, {
+                    "name ": "studio/da ",
+                    "url ": `${javbus}/studio/da`,
+                    "img ": "image/da.png "
+                }, {
+                    "name ": "有码类别 ",
+                    "url ": `${javbus}/genre/33`,
+                    "img ": "image/33.png "
+                }, {
+                    "name ": "さくらゆら ",
+                    "url ": `${javbus}/star/fxo`,
+                    "img ": "image/fxo.png "
+                }, {
+                    "name ": "みづなれい（みずなれい） ",
+                    "url ": `${javbus}/star/1zn`,
+                    "img ": "image/1zn.png "
+                }, {
+                    "name ": "愛音まりあ ",
+                    "url ": `${javbus}/star/qq9`,
+                    "img ": "image/qq9.png "
+                }, {
+                    "name ": "鈴原エミリ ",
+                    "url ": `${javbus}/star/n81`,
+                    "img ": "image/n81.png "
+                }, {
+                    "name ": "相沢みなみ ",
+                    "url ": `${javbus}/search/相沢みなみ`,
+                    "img ": "image/相沢みなみ.png "
+                }, {
+                    "name ": "希崎ジェシカ ",
+                    "url ": `${javbus}/star/5kp`,
+                    "img ": "image/5kp.png "
+                }, {
+                    "name ": "明日花キララ ",
+                    "url ": `${javbus}/star/1ny`,
+                    "img ": "image/1ny.png "
+                }, {
+                    "name ": "大橋未久 ",
+                    "url ": `${javbus}/uncensored/star/78x`,
+                    "img ": "image/78x.png "
+                }, {
+                    "name ": "鈴音りん ",
+                    "url ": `${javbus}/star/9q6`,
+                    "img ": "image/9q6.png "
+                }, {
+                    "name ": "司ミコト ",
+                    "url ": `${javbus}/star/956`,
+                    "img ": "image/956.png "
+                }, {
+                    "name ": "水野朝陽 ",
+                    "url ": `${javbus}/star/92l`,
+                    "img ": "image/92l.png "
+                }, {
+                    "name ": "木村つな ",
+                    "url ": `${javbus}/uncensored/star/3xf`,
+                    "img ": "image/3xf.png "
+                }, {
+                    "name ": "三島奈津子 ",
+                    "url ": `${javbus}/star/q1n`,
+                    "img ": "image/q1n.png "
+                }, {
+                    "name ": "大槻ひびき ",
+                    "url ": `${javbus}/star/2m3`,
+                    "img ": "image/2m3.png "
+                }, {
+                    "name ": "蒼井そら ",
+                    "url ": `${javbus}/star/wq`,
+                    "img ": "image/wq.png "
+                }, {
+                    "name ": "三上悠亜 ",
+                    "url ": `${javbus}/star/okq`,
+                    "img ": "image/okq.png "
+                }, {
+                    "name ": "琴水せいら ",
+                    "url ": `${javbus}/star/rbz`,
+                    "img ": "image/rbz.png "
+                }, {
+                    "name ": "橋本ありな ",
+                    "url ": `${javbus}/star/pmv`,
+                    "img ": "image/pmv.png "
+                }, {
+                    "name ": "秋山祥子 ",
+                    "url ": `${javbus}/search/秋山祥子`,
+                    "img ": "image/秋山祥子.png "
+                }, {
+                    "name ": "藍沢潤 ",
+                    "url ": `${javbus}/star/mut`,
+                    "img ": "image/mut.png "
+                }, {
+                    "name ": "天使もえ ",
+                    "url ": `${javbus}/star/n5q`,
+                    "img ": "image/n5q.png "
+                }, {
+                    "name ": "桜空もも ",
+                    "url ": `${javbus}/star/r62`,
+                    "img ": "image/r62.png "
+                }, {
+                    "name ": "みことりりあ ",
+                    "url ": `${javbus}/star/8ug`,
+                    "img ": "image/8ug.png "
+                }, {
+                    "name ": "小島みなみ ",
+                    "url ": `${javbus}/star/86u`,
+                    "img ": "image/86u.png "
+                }, {
+                    "name ": "波多野結衣 ",
+                    "url ": `${javbus}/star/2jv`,
+                    "img ": "image/2jv.png "
+                }, {
+                    "name ": "吉川あいみ ",
+                    "url ": `${javbus}/star/9ns`,
+                    "img ": "image/9ns.png "
+                }, {
+                    "name ": "夢乃あいか ",
+                    "url ": `${javbus}/star/8ec`,
+                    "img ": "image/8ec.png "
+                }, {
+                    "name ": "結菜えま ",
+                    "url ": `${javbus}/star/pd6`,
+                    "img ": "image/pd6.png "
+                }, {
+                    "name ": "竹内乃愛 ",
+                    "url ": `${javbus}/star/rsi`,
+                    "img ": "image/rsi.png "
+                }, {
+                    "name ": "栄川乃亜 ",
+                    "url ": `${javbus}/star/q44`,
+                    "img ": "image/q44.png "
+                }, {
+                    "name ": "すみれ美香 ",
+                    "url ": `${javbus}/star/qwu`,
+                    "img ": "image/qwu.png "
+                }, {
+                    "name ": "春宮すず ",
+                    "url ": `${javbus}/star/ozi`,
+                    "img ": "image/ozi.png "
+                }, {
+                    "name ": "浜崎真緒 ",
+                    "url ": `${javbus}/star/b6b`,
+                    "img ": "image/b6b.png "
+                }, {
+                    "name ": "白石茉莉奈 ",
+                    "url ": `${javbus}/star/9qp`,
+                    "img ": "image/9qp.png "
+                },]
+            },
+            create () {
+                console.log(1);
+                this.avny.forEach(element => {
+                    console.log(javbus + element.url);
+                });
+            },
+            methods: {
+
+                search (index) {
+                    this.avIndex = index;
+                    this.hashBool = false;
+                    //  使用临时值存储搜索内容
+                    this.searchTemp = this.searchValue;
+
+                    for (const i in this.hero) {
+                        if (this.hero[i].name.includes(this.searchValue)) {
+                            this.heroIndex = i;
+                            this.hashData = true;
+                            return;
+                        }
+                    }
+                },
+                herf (url) {
+                    /* let hrefTemp = this.avny[this.avIndex].url;
+                    window.open(
+                        hrefTemp,
+                        "CNN_WindowName",
+                        strWindowFeatures
+                    ); */
+                    this.hrefTemp = this.avny[this.avIndex].url;
+                }
+
+            }
+        }
+
+        )
+    </script>
+</body>
+
+</html>

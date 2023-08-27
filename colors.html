@@ -1,914 +1,477 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>书签预处理</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="shortcut icon" href="favicon_16.ico"/>
-    <link rel="bookmark" href="favicon_16.ico"/>
-    <!-- site css -->
-    <link rel="stylesheet" href="css/site.min.css">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <title>书签预处理</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="shortcut icon" href="favicon_16.ico" />
+  <link rel="bookmark" href="favicon_16.ico" />
+  <!-- site css -->
+  <link rel="stylesheet" href="css/site.min.css">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="dist/js/site.min.js"></script>
-  </head>
-  <style type="text/css">
-    .test{
-      border: -1px ;/* red solid;*/
-      margin: 0px 0px 0px 0px;
-      padding: 0px 0px 0px 0px;
-    }
+  <script type="text/javascript" src="dist/js/site.min.js"></script>
+</head>
+<style type="text/css">
+  .test {
+    border: -1px;
+    /* red solid;*/
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+</style>
+
+<body>
+  <div class="col-xs-6 test">
 
 
-  </style>
-  <body>
-                    <div class="col-xs-6 test" >
-              
-                        
-                        
-                      <!-- <div class="color-wrap clearfix"></div> -->
-                        
-                        <div class="color-picker">
-                          <a href="https://www.baidu.com">
-                          <div class="color-item" style="background-color:#C91F37;">
-                            百度
-                          </div></a>
-                          </div>  
-                        
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#DC3023;">
-                          </div>
-                        </div>
+    <!-- <div class="color-wrap clearfix"></div> -->
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#9D2933;">
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <a href="https://www.baidu.com">
+        <div class="color-item" style="background-color:#C91F37;">
+          百度
+        </div>
+      </a>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#CF000F;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E68364;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F22613;">
-                            
-                          </div>
-                        </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#CF3A24;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#C3272B;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #8F1D21;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D24D57;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F08F90;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F47983;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#DB5A6B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#C93756;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FCC9B9;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB3A7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F62459;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F58F84;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#875F9A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5D3F6A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#89729E;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#763568;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#8D608C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#A87CA0;">
-                            
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#DC3023;">
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5B3256;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BF55EC;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #8E44AD;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#9B59B6;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BE90D4;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#4D8FAC;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5D8CAE;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#22A7F0;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#19B5FE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#59ABE3;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#48929B;">
-                           
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#9D2933;">
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#317589;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#89C4F4;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #4B77BE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#1F4788;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#003171;">
-                           
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#CF000F;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#044F67;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E68364;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #264348;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#7A942E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#8DB255;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5B8930;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#6B9362;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#407A52;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#006442;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F22613;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#87D37C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#26A65B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #26C281;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#049372;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#2ABB9B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#16A085;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#36D7B7;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #03A678;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#4DAF7C;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D9B611;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F3C13A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F7CA18;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E2B13C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#A17917;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F5D76E;">
-                           
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#CF3A24;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F4D03F;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFA400;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E08A1E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB61E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FAA945;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFA631;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB94E;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#C3272B;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E29C45;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F9690E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #CA6924;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F5AB35;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BFBFBF;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F2F1EF;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BDC3C7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#ECF0F1;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D2D7D3;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#757D75;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #8F1D21;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#EEEEEE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#ABB7B7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #6C7A89;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#95A5A6;">
-                           
-                          </div>
-                        </div>
-                      </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D24D57;">
 
-                      <div class="col-xs-6 test">
-              
-                     <!--  <div class="color-wrap clearfix">
-                        
-                        <div class="color-picker">
-                          <a href="https://www.baidu.com">
-                          <div class="color-item" style="background-color:#C91F37;">
-                            百度
-                          </div></a>
-                          </div>  
-                        </div> -->
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F08F90;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#DC3023;">
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F47983;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#9D2933;">
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#DB5A6B;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#CF000F;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E68364;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F22613;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#C93756;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#CF3A24;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#C3272B;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #8F1D21;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D24D57;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F08F90;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F47983;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#DB5A6B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#C93756;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FCC9B9;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB3A7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F62459;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F58F84;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#875F9A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5D3F6A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#89729E;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#763568;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#8D608C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#A87CA0;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FCC9B9;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5B3256;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BF55EC;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #8E44AD;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#9B59B6;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BE90D4;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#4D8FAC;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5D8CAE;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#22A7F0;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#19B5FE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#59ABE3;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#48929B;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB3A7;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#317589;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#89C4F4;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #4B77BE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#1F4788;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#003171;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F62459;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#044F67;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F58F84;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #264348;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#7A942E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#8DB255;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5B8930;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#6B9362;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#407A52;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#006442;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#875F9A;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#87D37C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#26A65B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #26C281;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#049372;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5D3F6A;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#2ABB9B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#16A085;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#36D7B7;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #03A678;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#4DAF7C;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D9B611;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F3C13A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F7CA18;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E2B13C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#A17917;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F5D76E;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#89729E;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F4D03F;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFA400;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E08A1E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB61E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FAA945;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFA631;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB94E;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#763568;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E29C45;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F9690E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #CA6924;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F5AB35;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BFBFBF;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F2F1EF;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BDC3C7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#ECF0F1;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D2D7D3;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#757D75;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#8D608C;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#EEEEEE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#ABB7B7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #6C7A89;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#95A5A6;">
-                           
-                          </div>
-                        </div>
-                      </div>
-                   
-                   <div class="col-xs-6 test">
-              
-                     <!--  <div class="color-wrap clearfix">
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#A87CA0;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5B3256;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BF55EC;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #8E44AD;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#9B59B6;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BE90D4;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#4D8FAC;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5D8CAE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#22A7F0;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#19B5FE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#59ABE3;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#48929B;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#317589;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#89C4F4;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #4B77BE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#1F4788;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#003171;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#044F67;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #264348;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#7A942E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#8DB255;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5B8930;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#6B9362;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#407A52;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#006442;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#87D37C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#26A65B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #26C281;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#049372;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#2ABB9B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#16A085;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#36D7B7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #03A678;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#4DAF7C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D9B611;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F3C13A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F7CA18;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E2B13C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#A17917;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F5D76E;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F4D03F;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFA400;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E08A1E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB61E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FAA945;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFA631;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB94E;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E29C45;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F9690E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #CA6924;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F5AB35;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BFBFBF;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F2F1EF;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BDC3C7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#ECF0F1;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D2D7D3;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#757D75;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#EEEEEE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#ABB7B7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #6C7A89;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#95A5A6;">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-6 test">
+
+    <!--  <div class="color-wrap clearfix">
                         
                         <div class="color-picker">
                           <a href="https://www.baidu.com">
@@ -918,436 +481,436 @@
                           </div>  
                         </div> -->
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#DC3023;">
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#DC3023;">
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#9D2933;">
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#9D2933;">
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#CF000F;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E68364;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F22613;">
-                            
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#CF000F;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#CF3A24;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#C3272B;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #8F1D21;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D24D57;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F08F90;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F47983;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#DB5A6B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#C93756;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FCC9B9;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB3A7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F62459;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F58F84;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#875F9A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5D3F6A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#89729E;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#763568;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#8D608C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#A87CA0;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E68364;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5B3256;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BF55EC;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #8E44AD;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#9B59B6;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BE90D4;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#4D8FAC;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5D8CAE;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#22A7F0;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#19B5FE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#59ABE3;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#48929B;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F22613;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#317589;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#89C4F4;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #4B77BE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#1F4788;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#003171;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#044F67;">
-                            
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#CF3A24;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #264348;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#7A942E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#8DB255;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5B8930;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#6B9362;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#407A52;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#006442;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#C3272B;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#87D37C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#26A65B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #26C281;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#049372;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #8F1D21;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#2ABB9B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#16A085;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#36D7B7;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #03A678;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#4DAF7C;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D9B611;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F3C13A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F7CA18;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E2B13C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#A17917;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F5D76E;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D24D57;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F4D03F;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFA400;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E08A1E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB61E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FAA945;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFA631;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB94E;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F08F90;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E29C45;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F9690E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #CA6924;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F5AB35;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BFBFBF;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F2F1EF;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BDC3C7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#ECF0F1;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D2D7D3;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#757D75;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F47983;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#EEEEEE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#ABB7B7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #6C7A89;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#95A5A6;">
-                           
-                          </div>
-                        </div>
-                      </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#DB5A6B;">
 
-                      <div class="col-xs-6 test">
-              
-                     <!--  <div class="color-wrap clearfix">
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#C93756;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FCC9B9;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB3A7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F62459;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F58F84;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#875F9A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5D3F6A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#89729E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#763568;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#8D608C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#A87CA0;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5B3256;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BF55EC;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #8E44AD;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#9B59B6;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BE90D4;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#4D8FAC;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5D8CAE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#22A7F0;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#19B5FE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#59ABE3;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#48929B;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#317589;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#89C4F4;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #4B77BE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#1F4788;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#003171;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#044F67;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #264348;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#7A942E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#8DB255;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5B8930;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#6B9362;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#407A52;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#006442;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#87D37C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#26A65B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #26C281;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#049372;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#2ABB9B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#16A085;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#36D7B7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #03A678;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#4DAF7C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D9B611;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F3C13A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F7CA18;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E2B13C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#A17917;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F5D76E;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F4D03F;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFA400;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E08A1E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB61E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FAA945;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFA631;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB94E;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E29C45;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F9690E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #CA6924;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F5AB35;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BFBFBF;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F2F1EF;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BDC3C7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#ECF0F1;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D2D7D3;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#757D75;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#EEEEEE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#ABB7B7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #6C7A89;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#95A5A6;">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-6 test">
+
+    <!--  <div class="color-wrap clearfix">
                         
                         <div class="color-picker">
                           <a href="https://www.baidu.com">
@@ -1357,437 +920,436 @@
                           </div>  
                         </div> -->
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#DC3023;">
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#DC3023;">
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#9D2933;">
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#9D2933;">
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#CF000F;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E68364;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F22613;">
-                            
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#CF000F;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#CF3A24;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#C3272B;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #8F1D21;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D24D57;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F08F90;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F47983;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#DB5A6B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#C93756;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FCC9B9;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB3A7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F62459;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F58F84;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#875F9A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5D3F6A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#89729E;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#763568;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#8D608C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#A87CA0;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E68364;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5B3256;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BF55EC;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #8E44AD;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#9B59B6;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BE90D4;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#4D8FAC;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5D8CAE;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#22A7F0;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#19B5FE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#59ABE3;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#48929B;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F22613;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#317589;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#89C4F4;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #4B77BE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#1F4788;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#003171;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#044F67;">
-                            
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#CF3A24;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #264348;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#7A942E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#8DB255;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5B8930;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#6B9362;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#407A52;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#006442;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#C3272B;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#87D37C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#26A65B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #26C281;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#049372;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #8F1D21;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#2ABB9B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#16A085;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#36D7B7;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #03A678;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#4DAF7C;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D9B611;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F3C13A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F7CA18;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E2B13C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#A17917;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F5D76E;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D24D57;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F4D03F;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFA400;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E08A1E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB61E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FAA945;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFA631;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB94E;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F08F90;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E29C45;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F9690E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #CA6924;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F5AB35;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BFBFBF;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F2F1EF;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BDC3C7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#ECF0F1;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D2D7D3;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#757D75;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F47983;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#EEEEEE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#ABB7B7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #6C7A89;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#95A5A6;">
-                           
-                          </div>
-                        </div>
-                      </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#DB5A6B;">
 
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#C93756;">
 
-                      <div class="col-xs-6 test">
-              
-                     <!--  <div class="color-wrap clearfix">
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FCC9B9;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB3A7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F62459;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F58F84;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#875F9A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5D3F6A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#89729E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#763568;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#8D608C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#A87CA0;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5B3256;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BF55EC;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #8E44AD;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#9B59B6;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BE90D4;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#4D8FAC;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5D8CAE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#22A7F0;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#19B5FE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#59ABE3;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#48929B;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#317589;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#89C4F4;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #4B77BE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#1F4788;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#003171;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#044F67;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #264348;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#7A942E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#8DB255;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5B8930;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#6B9362;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#407A52;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#006442;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#87D37C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#26A65B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #26C281;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#049372;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#2ABB9B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#16A085;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#36D7B7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #03A678;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#4DAF7C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D9B611;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F3C13A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F7CA18;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E2B13C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#A17917;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F5D76E;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F4D03F;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFA400;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E08A1E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB61E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FAA945;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFA631;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB94E;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E29C45;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F9690E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #CA6924;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F5AB35;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BFBFBF;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F2F1EF;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BDC3C7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#ECF0F1;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D2D7D3;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#757D75;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#EEEEEE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#ABB7B7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #6C7A89;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#95A5A6;">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-6 test">
+
+    <!--  <div class="color-wrap clearfix">
                         
                         <div class="color-picker">
                           <a href="https://www.baidu.com">
@@ -1797,432 +1359,873 @@
                           </div>  
                         </div> -->
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#DC3023;">
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#DC3023;">
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#9D2933;">
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#9D2933;">
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#CF000F;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E68364;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F22613;">
-                            
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#CF000F;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#CF3A24;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#C3272B;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #8F1D21;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D24D57;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F08F90;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F47983;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#DB5A6B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#C93756;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FCC9B9;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB3A7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F62459;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F58F84;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#875F9A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5D3F6A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#89729E;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#763568;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#8D608C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#A87CA0;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E68364;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5B3256;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BF55EC;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #8E44AD;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#9B59B6;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BE90D4;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#4D8FAC;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5D8CAE;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#22A7F0;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#19B5FE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#59ABE3;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#48929B;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F22613;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#317589;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#89C4F4;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #4B77BE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#1F4788;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#003171;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#044F67;">
-                            
-                          </div>
-                        </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#CF3A24;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #264348;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#7A942E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#8DB255;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#5B8930;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#6B9362;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#407A52;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#006442;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#C3272B;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#87D37C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#26A65B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #26C281;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#049372;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #8F1D21;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#2ABB9B;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#16A085;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#36D7B7;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #03A678;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#4DAF7C;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D9B611;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F3C13A;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F7CA18;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E2B13C;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#A17917;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F5D76E;">
-                           
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D24D57;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F4D03F;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFA400;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E08A1E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB61E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FAA945;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFA631;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#FFB94E;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F08F90;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#E29C45;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F9690E;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #CA6924;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F5AB35;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BFBFBF;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#F2F1EF;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#BDC3C7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#ECF0F1;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#D2D7D3;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#757D75;">
-                            
-                          </div>
-                        </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F47983;">
 
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#EEEEEE;">
-                            
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#ABB7B7;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color: #6C7A89;">
-                           
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <div class="color-item" style="background-color:#95A5A6;">
-                           
-                          </div>
-                        </div>
-                      </div>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#DB5A6B;">
 
-  </body>
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#C93756;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FCC9B9;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB3A7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F62459;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F58F84;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#875F9A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5D3F6A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#89729E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#763568;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#8D608C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#A87CA0;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5B3256;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BF55EC;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #8E44AD;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#9B59B6;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BE90D4;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#4D8FAC;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5D8CAE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#22A7F0;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#19B5FE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#59ABE3;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#48929B;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#317589;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#89C4F4;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #4B77BE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#1F4788;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#003171;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#044F67;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #264348;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#7A942E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#8DB255;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5B8930;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#6B9362;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#407A52;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#006442;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#87D37C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#26A65B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #26C281;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#049372;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#2ABB9B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#16A085;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#36D7B7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #03A678;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#4DAF7C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D9B611;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F3C13A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F7CA18;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E2B13C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#A17917;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F5D76E;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F4D03F;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFA400;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E08A1E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB61E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FAA945;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFA631;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB94E;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E29C45;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F9690E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #CA6924;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F5AB35;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BFBFBF;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F2F1EF;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BDC3C7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#ECF0F1;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D2D7D3;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#757D75;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#EEEEEE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#ABB7B7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #6C7A89;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#95A5A6;">
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-xs-6 test">
+
+    <!--  <div class="color-wrap clearfix">
+                        
+                        <div class="color-picker">
+                          <a href="https://www.baidu.com">
+                          <div class="color-item" style="background-color:#C91F37;">
+                            百度
+                          </div></a>
+                          </div>  
+                        </div> -->
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#DC3023;">
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#9D2933;">
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#CF000F;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E68364;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F22613;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#CF3A24;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#C3272B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #8F1D21;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D24D57;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F08F90;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F47983;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#DB5A6B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#C93756;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FCC9B9;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB3A7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F62459;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F58F84;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#875F9A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5D3F6A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#89729E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#763568;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#8D608C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#A87CA0;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5B3256;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BF55EC;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #8E44AD;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#9B59B6;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BE90D4;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#4D8FAC;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5D8CAE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#22A7F0;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#19B5FE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#59ABE3;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#48929B;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#317589;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#89C4F4;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #4B77BE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#1F4788;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#003171;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#044F67;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #264348;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#7A942E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#8DB255;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#5B8930;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#6B9362;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#407A52;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#006442;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#87D37C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#26A65B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #26C281;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#049372;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#2ABB9B;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#16A085;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#36D7B7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #03A678;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#4DAF7C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D9B611;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F3C13A;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F7CA18;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E2B13C;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#A17917;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F5D76E;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F4D03F;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFA400;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E08A1E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB61E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FAA945;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFA631;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#FFB94E;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#E29C45;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F9690E;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #CA6924;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F5AB35;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BFBFBF;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#F2F1EF;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#BDC3C7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#ECF0F1;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#D2D7D3;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#757D75;">
+
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#EEEEEE;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#ABB7B7;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color: #6C7A89;">
+
+      </div>
+    </div>
+    <div class="color-picker">
+      <div class="color-item" style="background-color:#95A5A6;">
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
 </html>
